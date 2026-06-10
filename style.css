@@ -1731,7 +1731,45 @@ RESPONSIVE DESIGN
 
 }
 
+/* ==========================================
+   HAMBURGER MENU
+========================================== */
+
+.hamburger{
+
+    display:none;
+
+    flex-direction:column;
+
+    cursor:pointer;
+
+    gap:6px;
+
+    z-index:2000;
+
+}
+
+.hamburger span{
+
+    width:28px;
+
+    height:3px;
+
+    background:white;
+
+    border-radius:10px;
+
+    transition:.3s;
+
+}
+
 @media(max-width:768px){
+
+.hero{
+
+    padding-top:100px;
+
+}
 
 
 section{
@@ -1754,17 +1792,51 @@ section{
 
 #navbar{
 
-    flex-direction:column;
+    flex-direction:row;
 
-    gap:15px;
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 20px;
+
+}
+
+.hamburger{
+
+    display:flex;
 
 }
 
 .nav-links{
 
-    flex-wrap:wrap;
+    position:fixed;
 
-    justify-content:center;
+    top:70px;
+
+    left:0;
+
+    width:100%;
+
+    background:rgba(5,8,22,.95);
+
+    backdrop-filter:blur(20px);
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:20px 0;
+
+    gap:20px;
+
+    display:none;
+
+}
+
+.nav-links.active{
+
+    display:flex;
 
 }
 
