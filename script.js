@@ -851,3 +851,44 @@ logo.addEventListener(
 
 );
 
+/* ==========================================
+   MOBILE MENU
+========================================== */
+
+const hamburger =
+document.querySelector(
+".hamburger"
+);
+
+const mobileNav =
+document.querySelector(
+".nav-links"
+);
+
+hamburger.addEventListener(
+"click",
+() => {
+
+    mobileNav.classList.toggle(
+"active"
+);
+
+});
+
+document
+.querySelectorAll(
+".nav-links a"
+)
+.forEach(link => {
+
+    link.addEventListener(
+    "click",
+    () => {
+
+       mobileNav.classList.remove(
+"active"
+);
+
+    });
+
+});
